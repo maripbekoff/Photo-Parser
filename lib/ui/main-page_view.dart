@@ -75,17 +75,22 @@ class _MainPageState extends State<MainPage> {
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       )),
+                                  snapshot.data[index]['description'] != null
+                                      ? TextSpan(
+                                          text:
+                                              '${snapshot.data[index]['description']}\n\n')
+                                      : TextSpan(text: 'Нет данных'),
                                   TextSpan(
-                                      text:
-                                          '${snapshot.data[index]['description']}\n\n'),
-                                          TextSpan(
                                       text: 'Автор:',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       )),
-                                  TextSpan(
-                                      text:
-                                          '\n${snapshot.data[index]['user']['username']}'),
+                                  snapshot.data[index]['user']['username'] !=
+                                          null
+                                      ? TextSpan(
+                                          text:
+                                              '\n${snapshot.data[index]['user']['username']}')
+                                      : TextSpan(text: 'Нет данных'),
                                 ],
                               ),
                             ),
