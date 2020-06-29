@@ -71,11 +71,21 @@ class _MainPageState extends State<MainPage> {
                                 style: TextStyle(color: Colors.black),
                                 children: [
                                   TextSpan(
-                                      text:
-                                          'Описание\n${snapshot.data[index]['description']}\n\n'),
+                                      text: 'Описание:\n',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      )),
                                   TextSpan(
                                       text:
-                                          'Автор: \n${snapshot.data[index]['user']['username']}'),
+                                          '${snapshot.data[index]['description']}\n\n'),
+                                          TextSpan(
+                                      text: 'Автор:',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      )),
+                                  TextSpan(
+                                      text:
+                                          '\n${snapshot.data[index]['user']['username']}'),
                                 ],
                               ),
                             ),
