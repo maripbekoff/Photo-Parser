@@ -79,7 +79,7 @@ class _MainPageState extends State<MainPage> {
                                       ? TextSpan(
                                           text:
                                               '${snapshot.data[index]['description']}\n\n')
-                                      : TextSpan(text: 'Нет данных'),
+                                      : TextSpan(text: 'Нет данных\n'),
                                   TextSpan(
                                       text: 'Автор:',
                                       style: TextStyle(
